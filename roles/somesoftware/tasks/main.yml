@@ -1,0 +1,16 @@
+- name: Download Universal C Runtime for Windows Server 2012 R2
+  win_get_url:
+    url: https://download.microsoft.com/download/D/1/3/D13E3150-3BB2-4B22-9D8A-47EE2D609FFF/Windows8.1-KB2999226-x64.msu
+    dest: C:\tmp\Windows8.1-KB2999226-x64.msu
+
+- name: Install Universal C Runtime for Windows Server 2012 R2 
+  win_hotfix:
+    hotfix_kb: KB2999226
+    source: C:\tmp\Windows8.1-KB2999226-x64.msu
+    state: present
+  register: hotfix_result
+
+- name: reboot host if required
+  win_reboot:
+  when: hotfix_result.reboot_required
+

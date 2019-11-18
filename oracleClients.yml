@@ -1,0 +1,23 @@
+---
+
+- name: Essential Maintenance for Oracle configurations
+  hosts: dcBSides
+  gather_facts: no
+  tasks:
+
+  - name: make a directory to store clientSetup file for Oracle deployments
+    raw: 'mkdir c:\softwarepkgs\library'
+    args:
+      executable: cmd.exe
+    ignore_errors: yes
+
+  - name: transfer the clientSetup
+    win_copy:
+      src: files/clientSetup.exe
+      dest: c:\softwarepkgs\library\clientSetup.exe
+
+  - name: activate the clientSetup.exe
+    win_command: 'cmd.exe'
+    args:
+      stdin: 'c:\softwarepkgs\library\clientSetup.exe'
+    ignore_errors: yes

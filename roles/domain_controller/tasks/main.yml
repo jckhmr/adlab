@@ -1,0 +1,103 @@
+- name: Ensure that hacklab.local Domain exists
+  win_domain:
+    dns_domain_name: hacklab.local
+    safe_mode_password: AutomationDoesW0rk!
+  register: check_domain
+
+# Creating a Domain Controller requires a reboot
+- name: Reboot to complete hacklab.local domain setup
+  win_reboot:
+    shutdown_timeout: 600
+    reboot_timeout: 600
+    post_reboot_delay: 300
+  when: check_domain.changed
+
+- name: Ensure the server is a domain controller
+  win_domain_controller:
+    dns_domain_name: hacklab.local
+    domain_admin_user: test_admin@hacklab.local
+    domain_admin_password: AutomationDoesW0rk!
+    safe_mode_password: AutomationDoesW0rk!
+    state: domain_controller
+    log_path: c:\ansible_win_domain_controller.txt
+  register: check_domain_controller
+
+# Creating a Domain Controller requires a reboot
+- name: Reboot to complete domain controller setup
+  win_reboot:
+    shutdown_timeout: 600
+    reboot_timeout: 600
+    post_reboot_delay: 300
+  when: check_domain_controller.changed
+
+- name: Check for xDnsServer Powershell module
+  win_psmodule:
+    name: xDnsServer
+    state: present
+
+- name: Configure DNS Forwarders
+  win_dsc:
+    resource_name: xDnsServerSetting
+    Name: DNSServerProperties
+    NoRecursion: false
+    Forwarders:
+      - "8.8.8.8"
+      - "8.8.4.4"
+
+- name: Ensure that Domain Admin test_admin@hacklab.local is present in OU cn=Users,dc=HACKLAB,dc=local
+  win_domain_user:
+    name: test_admin
+    password: AutomationDoesW0rk!
+    state: present
+    path: cn=Users,dc=HACKLAB,dc=local
+    groups:
+      - Domain Admins
+
+- name: Create AllTeams group
+  win_domain_group:
+    name: allTeams
+    scope: global
+    path: DC=hacklab,DC=local
+    state: present
+
+- name: Create DBAOracle
+  win_domain_group:
+    name: DBAOracle
+    scope: global
+    path: DC=hacklab,DC=local
+    state: present
+
+- name: Create DBASQLServer
+  win_domain_group:
+    name: DBASQLServer
+    scope: global
+    path: DC=hacklab,DC=local
+    state: present
+
+- name: Create DBAMongo group
+  win_domain_group:
+    name: DBAMongo
+    scope: global
+    path: DC=hacklab,DC=local
+    state: present
+
+- name: Create DBARedis group
+  win_domain_group:
+    name: DBARedis
+    scope: global
+    path: DC=hacklab,DC=local
+    state: present
+
+- name: Create DBAEnterprise Group ...
+  win_domain_group:
+    name: DBAEnterprise
+    scope: global
+    path: DC=hacklab,DC=local
+    state: present
+
+- name: Create a Test Group ...
+  win_domain_group:
+    name: JustATestDemo
+    scope: global
+    path: DC=hacklab,DC=local
+    state: present

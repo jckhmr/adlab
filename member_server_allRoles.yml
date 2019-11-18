@@ -1,0 +1,9 @@
+---
+
+- name: hacklab.local member server configuration
+  hosts: member_servers
+
+  roles:
+    - { role: common }
+    - { role: member_server }
+    - { role: mssql }

@@ -1,0 +1,42 @@
+- name: Ensure user bob is present
+  win_user:
+    name: bob
+    password: B0bP4ssw0rd
+    state: absent
+    groups:
+      - Administrators
+
+- name: Ensure user alice is present
+  win_user:
+    name: alice
+    password: aliceP4ssw0rd
+    state: absent
+    groups:
+      - Administrators
+
+- name: disable enhanced exit codes
+  win_chocolatey_feature:
+    name: useEnhancedExitCodes
+    state: disabled
+
+- name: Install multiple packages sequentially
+  win_chocolatey:
+    name: '{{ item }}'
+    state: present
+  with_items:
+  - notepadplusplus
+  - putty
+  - python
+  - git
+  - 7zip
+  - sysinternals
+  - wget
+
+- name: Change the hostname to new_hostname
+  win_hostname:
+    name: dc01
+  register: win_hostname
+
+- name: Reboot
+  win_reboot:
+  when: win_hostname.reboot_required

@@ -1,0 +1,15 @@
+# Ansible user
+ansible_user: vagrant
+
+# best practice would be to encrypt this using Ansible vault
+ansible_password: vagrant
+
+# Setup some base values for connectivity to windows hosts
+# Using basic authentication because we're using a local account.
+ansible_winrm_transport: basic
+ansible_port: 5986
+ansible_connection: winrm
+
+# The following is necessary for Python 2.7.9+ when using default WinRM self-signed certificates:
+ansible_winrm_server_cert_validation: ignore
+ansible_winrm_kerberos_delegation: true

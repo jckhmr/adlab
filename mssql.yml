@@ -1,0 +1,6 @@
+# setup mssql server
+---
+- name: setup mssql server
+  hosts: member_servers
+  roles:
+    - mssql

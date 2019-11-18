@@ -1,0 +1,14 @@
+[windows]
+[windows:children]
+domain_controllers
+member_servers
+workstations
+
+[domain_controllers]
+dcBSides ansible_host=192.168.200.10
+
+[member_servers]
+serverBSides ansible_host=192.168.200.11
+
+[workstations]
+workstationBSides ansible_host=192.168.200.12

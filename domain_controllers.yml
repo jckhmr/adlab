@@ -1,0 +1,9 @@
+---
+- name: hacklab.local Domain Controller configuration
+  hosts: domain_controllers
+  serial: 1
+  roles:
+  - { role: somesoftware }
+  - { role: common }
+  - { role: domain_controller }
+
