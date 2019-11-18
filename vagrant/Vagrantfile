@@ -1,0 +1,39 @@
+Vagrant.configure("2") do |config|
+  config.vm.guest = :windows
+  config.vm.communicator = "winrm"
+  config.vm.boot_timeout = 600
+  config.vm.graceful_halt_timeout = 600
+  config.winrm.retry_limit = 10
+  config.winrm.retry_delay = 20
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine.
+#  config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "msrdp", auto_correct: true
+#  config.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
+
+ # config.vm.network :forwarded_port, guest: 3389, host: 3389, auto_correct: true
+ # config.vm.network :forwarded_port, guest: 5985, host: 5985, auto_correct: true
+
+  config.vm.define "dcBsides" do |dcBsides|
+    dcBsides.vm.box = "kkolk/w2k12r2-sysprep-ready"
+    dcBsides.vm.network "private_network", ip: "192.168.200.10"
+    dcBsides.vm.network :forwarded_port, guest: 5985, host: 25985, id: "winrm"
+    dcBsides.vm.network :forwarded_port, guest: 3389, host: 23389, id: "msrdp"
+
+
+  end
+  config.vm.define "serverBsides" do |serverBsides|
+    serverBsides.vm.box = "kkolk/w2k12r2-sysprep-ready"
+    serverBsides.vm.network "private_network", ip: "192.168.200.11"
+    serverBsides.vm.network :forwarded_port, guest: 5985, host: 35985, id: "winrm"
+    serverBsides.vm.network :forwarded_port, guest: 3389, host: 33389, id: "msrdp"
+  end
+  config.vm.define "workstationBsides" do |workstationBsides|
+    workstationBsides.vm.box = "StefanScherer/windows_10"
+    workstationBsides.vm.network "private_network", ip: "192.168.200.12"
+    workstationBsides.vm.network :forwarded_port, guest: 5985, host: 45985, id: "winrm"
+    workstationBsides.vm.network :forwarded_port, guest: 3389, host: 43389, id: "msrdp"
+  end
+  config.vm.provision "shell", path:"/root/vagrant/lab/ConfigureRemotingForAnsible.ps1"
+end
+
