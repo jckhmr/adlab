@@ -1,4 +1,4 @@
-kkolk.mssql
+kkolk.mssql - sourced 99.9999999% from https://github.com/kkolk/mssql
 =========
 Description
 -----------
