@@ -18,7 +18,7 @@ Keep in mind though that since you are creating the lab environment on a local c
 ### Some advice
 - Create some regular snapshots, just in case anything goes south when you are conducting your hacking/security research
 - Do not expose the lab to the Internet or rely upon it for production purposes.  None of the machines are 'hardened' in any way, so caution is advised.
-- I've primarily tested this on a Kali 2019.3 environment
+- I've primarily tested this on a Kali 2019.3 machine
 
 ### Kudos to the community
 I spent a LOT of timing researching this stuff and inevitably I came across lots of useful information out there online.  One source in particular is <a href="https://github.com/kkolk" target="_blank">kkolk</a> - their Microsoft SQL Server Ansible role is included here with perhaps a few very minor modifications/additions. Thanks kkolk! 
