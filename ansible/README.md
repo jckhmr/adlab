@@ -7,6 +7,8 @@ I spent a LOT of timing researching this stuff and inevitably I came across lots
 ### Requirements
 - Ensure you have already set up your 3 'raw' vagrant boxes as detailed in github.com/jckhmr/adlab/vagrant
 - You'll need to install your Ansible Controller on a .nix computer.  I used a Kali 2019.3 machine.  You can find a great guide here from <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html" target="_blank">the good folks at Ansible</a>.  I would add that the Ansible docs site is an incredibly useful resource if you want to learn more about the topic.
+- On my home lab setup, once the lab was up and running, I was glad of the fact that I had 16gb of RAM (on an i7 that is nearly 10 years old).  I also needed in the region of 70gb of space.  Yes, it sounds like a lot, but consider what you will end up with:
+-- this
 
 ### I've got everything installed, now what?
 - just run the following command and it will start to run the playbook for you.
