@@ -17,7 +17,7 @@ Keep in mind though that since you are creating the lab environment on a local c
 
 ### Some advice
 - Create some regular snapshots, just in case anything goes south when you are conducting your hacking/security research
-- Do not expose the lab to the Internet or rely upon them for production purposes.  None of the machines are 'hardened' in any way.
+- Do not expose the lab to the Internet or rely upon it for production purposes.  None of the machines are 'hardened' in any way, so caution is advised.
 - I've primarily tested this on a Kali 2019.3 environment
 - In the event that any of the playbooks ever 'time-out', from personal experience it's because my computer had simply too many other things running.  In this case .... kill off anything unnecessary and re-run the playbook command listed above.
 
