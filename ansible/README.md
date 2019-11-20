@@ -20,6 +20,7 @@ Once everything is up and running (just watch for the on-screen feedback) you ca
 - Create some regular snapshots, just in case anything goes south when you are conducting your hacking/security research
 - Do not expose the lab to the Internet or rely upon them for production purposes.  None of the machines are 'hardened' in any way.
 - I've primarily tested this on a Kali 2019.3 environment
+- In the event that any of the playbooks ever 'time-out', from personal experience it's because my computer had simply too many other things running.  In this case .... kill off anything unnecessary and re-run the playbook command listed above.
 
 ### Other bits and pieces
 General feedback is welcome ... you can find me on <a href="https://twitter.com/jckhmr_t" target="_blank">twitter (@jckhmr_t)</a>.  
