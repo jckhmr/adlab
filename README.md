@@ -13,7 +13,7 @@ Using the code in this repo, you will use Vagrant to create the raw basic boxes 
 ### Tear down and destroy
 While the Windows machines are based upon trial versions, this doesn't mean the whole lab will only last a set period of time (e.g. 180 days for the server OS).  You can issue a 'vagrant destroy' command (in the folder where 'Vagrantfile' exists) followed by by 'vagrant up', run the Ansible playbook again, and you'll be in business.  
 
-Keep in mind though that since you are creating the lab environment on a local computer, there is a lot of machine time - i.e. downloading stuff.  Be patient per the horsepower available to you (local machine and Internet connection).  Just by way of example, the total time to build and configure the boxes was around 2 hours.  
+Keep in mind though that since you are creating the lab environment on a local computer, there is a lot of machine time - i.e. downloading stuff.  Be patient per the horsepower available to you (local machine and Internet connection).  Just by way of example, the total time to build and configure the boxes was around 2 hours for me.  
 
 ### Some advice
 - Create some regular snapshots, just in case anything goes south when you are conducting your hacking/security research
