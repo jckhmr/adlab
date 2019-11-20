@@ -15,6 +15,12 @@ While the Windows machines are based upon trial versions, this doesn't mean the 
 
 Keep in mind though that since you are creating the lab environment on a local computer, there is a lot of machine time - i.e. downloading stuff.  Be patient per the horsepower available to you (local machine and Internet connection).  Just by way of example, the total time to build and configure the boxes was around 2 hours.  
 
+### Some advice
+- Create some regular snapshots, just in case anything goes south when you are conducting your hacking/security research
+- Do not expose the lab to the Internet or rely upon them for production purposes.  None of the machines are 'hardened' in any way.
+- I've primarily tested this on a Kali 2019.3 environment
+- In the event that any of the playbooks ever 'time-out', from personal experience it's because my computer had simply too many other things running.  In this case .... kill off anything unnecessary and re-run the playbook command listed above.
+
 ### Kudos to the community
 I spent a LOT of timing researching this stuff and inevitably I came across lots of useful information out there online.  One source in particular is <a href="https://github.com/kkolk" target="_blank">kkolk</a> - their Microsoft SQL Server Ansible role is included here with perhaps a few very minor modifications/additions. Thanks kkolk! 
 
