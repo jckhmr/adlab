@@ -5,4 +5,5 @@ The Ansible playbooks and roles made available here where created as part of a t
 I spent a LOT of timing researching this stuff and inevitably I came across lots of useful information out there online.  One source in particular is github.com/kkolk - their Microsoft SQL Server Ansible role is included here with perhaps a few very minor modifications/additions.  
 
 ### Requirements
-- Ensure
+- Ensure you have already set up your 3 'raw' vagrant boxes as detailed in github.com/jckhmr/adlab/vagrant
+- You'll need to install your Ansible Controller on a .nix computer.  I used a Kali 2019.3 machine.  You can find a great guide here from <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">the good folks at Ansible</a>.  I would add that the Ansible docs site is an incredibly useful resource if you want to learn more about the topic.
