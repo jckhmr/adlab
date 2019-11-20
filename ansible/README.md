@@ -21,4 +21,7 @@ Once everything is up and running (just watch for the on-screen feedback) you ca
 - Do not expose the lab to the Internet or rely upon them for production purposes.  None of the machines are 'hardened' in any way.
 - I've primarily tested this on a Kali 2019.3 environment
 
+### Other bits and pieces
+General feedback is welcome ... you can find me on <a href="https://twitter.com/jckhmr_t" target="_blank">twitter (@jckhmr_t)</a>.  
+
 Happy Hacking .... j
