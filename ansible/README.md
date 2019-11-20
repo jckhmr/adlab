@@ -14,6 +14,6 @@
 Once everything is up and running (just watch for the on-screen feedback) you can then remote desktop into each of the machines or start whatever it is you want to do.
 
 ### Other bits and pieces
-General feedback is welcome ... you can find me on <a href="https://twitter.com/jckhmr_t" target="_blank">twitter (@jckhmr_t)</a>.  
+General feedback is welcome ... you can find me on <a href="https://twitter.com/jckhmr_t" target="_blank">twitter (@jckhmr_t)</a>.  I also have a (small, but developing) <a href="https://jckhmr.net" target="_blank">website</a>.  
 
 Happy Hacking .... jckhmr
