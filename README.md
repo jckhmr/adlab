@@ -8,7 +8,12 @@ Using the code in this repo, you will use Vagrant to create the raw basic boxes 
 
 - Windows 2012 R2 Domain Controller
 - Windows 2012 R2 'Member Server' comprising of a file server, web server, MS SQL Server (developer edition) and MS SQL Server Management Studio
-- Windows 10 Workstation.
+- Windows 10 Workstation
+
+### Tear down and destroy
+While the Windows machines are based upon trial versions, this doesn't mean the whole lab will only last a set period of time (e.g. 180 days for the server OS).  You can issue a 'vagrant destroy' command (in the folder where 'Vagrantfile' exists) followed by by 'vagrant up', run the Ansible playbook again, and you'll be in business.  
+
+Keep in mind though that since you are creating the lab environment on a local computer, there is a lot of machine time - i.e. downloading stuff.  Be patient per the horsepower available to you (local machine and Internet connection).
 
 ### Kudos to the community
 I spent a LOT of timing researching this stuff and inevitably I came across lots of useful information out there online.  One source in particular is <a href="https://github.com/kkolk" target="_blank">kkolk</a> - their Microsoft SQL Server Ansible role is included here with perhaps a few very minor modifications/additions. Thanks kkolk! 
