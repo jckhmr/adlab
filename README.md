@@ -24,6 +24,6 @@ Keep in mind though that since you are creating the lab environment on a local c
 I spent a LOT of timing researching this stuff and inevitably I came across lots of useful information out there online.  One source in particular is <a href="https://github.com/kkolk" target="_blank">kkolk</a> - their Microsoft SQL Server Ansible role is included here with perhaps a few very minor modifications/additions. Thanks kkolk! 
 
 ### Next Steps
-General feedback is welcome ... you can find me on <a href="https://twitter.com/jckhmr_t" target="_blank">twitter (@jckhmr_t)</a>.  
+General feedback is welcome ... you can find me on <a href="https://twitter.com/jckhmr_t" target="_blank">twitter (@jckhmr_t)</a>. I also have a (small, but developing) <a href="https://jckhmr.net" target="_blank">website</a>.  
 
 Happy Hacking .... jckhmr 
