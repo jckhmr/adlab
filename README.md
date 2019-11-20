@@ -1,6 +1,6 @@
 ## Introducing the Active Directory Learning Lab
 
-I'm a big fan of automation with tools such as Ansible, Vagrant and Terrorm now being put to regular use by me.  Also, as a Red Team Operator I spend a lot of time modelling attacks up, trying new ideas out and generally keeping myself 'sharp'.  I wanted to create something that help me to scratch all of this itches. The research and development culminated in my BSides Belfast 2019 presentation: Offensive Ansible for Red Teams (Attack, Build, Learn).  
+I'm a big fan of automation with tools such as Ansible, Vagrant and Terrorm now being put to regular use by me.  Also, as a Red Team Operator I spend a lot of time modelling attacks up, trying new ideas out and generally keeping myself 'sharp'.  I wanted to create something that help me to scratch all of this itches. The research and development culminated in my BSides Belfast 2019 presentation: <a href="https://github.com/jckhmr/presentations/blob/master/BSidesBelfast2019_Final_Optimized.pptx" target="_blank">Offensive Ansible for Red Teams (Attack, Build, Learn)</a>.  
 
 Even though I call this a 'learning lab', the 'learning' isn't in the setting up/configuration of the network, moreso on what you can do with a fully functioning Active Directory environment, if you are into all things Red Team / offensive security.  You want to get on with the business of learning/sharpening your offensive skillsets as opposed to spending countless hours setting the environment up.
 
