@@ -6,10 +6,10 @@
 ### I've got everything installed, now what?
 - just run the following command and it will start to run the playbook for you.
 
+```ansible-playbook labsetup.yml -i environments/bsides/hosts --user=vagrant -vv```
+
 ### FYI ...
 - In the event that any of the playbooks ever 'time-out', from personal experience it's because my computer had simply too many other things running.  In this case .... kill off anything unnecessary and re-run the playbook command listed above.
-
-```ansible-playbook labsetup.yml -i environments/bsides/hosts --user=vagrant -vv```
 
 Once everything is up and running (just watch for the on-screen feedback) you can then remote desktop into each of the machines or start whatever it is you want to do.
 
