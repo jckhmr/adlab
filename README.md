@@ -4,7 +4,7 @@ I'm a big fan of automation with tools such as Ansible, Vagrant and Terrorm now 
 
 Even though I call this a 'learning lab', the 'learning' isn't in the setting up/configuration of the network, moreso on what you can do with a fully functioning Active Directory environment, if you are into all things Red Team / offensive security.  You want to get on with the business of learning/sharpening your offensive skillsets as opposed to spending countless hours setting the environment up.
 
-Using the code in this repo, you will use Vagrant to create the raw basic boxes (VirtualBox) and Ansible to configure it all into to three fully functioning pieces of complete (albeit small) Active Directory environment:
+Using the code in this repo, you will use Vagrant to create the raw basic boxes (VirtualBox); and Ansible to configure it all into to three fully functioning pieces of a complete (albeit small) Active Directory environment:
 
 - Windows 2012 R2 Domain Controller
 - Windows 2012 R2 'Member Server' comprising of a file server, web server, MS SQL Server (developer edition) and MS SQL Server Management Studio
